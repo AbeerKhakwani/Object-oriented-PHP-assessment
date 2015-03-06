@@ -2,16 +2,16 @@
 
 class Contact{
 
-      private name;
-      private image;
-      private number;
-      private email;
+      private $name;
+      private $image;
+      private $number;
+      private $email;
       
 
 
       function __construct__ ( $add_name , $add_image , $add_number, $add_email  ) {
       	$this->name=$add_name;
-        $this->name=$add_name;
+        $this->image=$add_image;
         $this->number=$add_number;
         $this->email=$add_email;
       }
@@ -21,7 +21,7 @@ class Contact{
         {
            $this->name = (string) $new_name;
             
-            }
+            
         }
         function getName()
         {
@@ -34,7 +34,7 @@ class Contact{
         {
            $this->image = (string) $new_image;
             
-            }
+            
         }
         function getImage()
         {
@@ -48,7 +48,7 @@ class Contact{
         {
            $this->phone =  $new_phone;
             
-            }
+            
         }
         function getPhone()
         {
@@ -61,7 +61,7 @@ class Contact{
         {
            $this->email =  $new_email;
             
-            }
+            
         }
         function getEmail()
         {
@@ -71,21 +71,19 @@ class Contact{
 
         function save(){
         	array_push($_SESSION['list_of_contacts'], $this);
-
-
-
         }
 
+
         static function getAll(){
-        	return ($_SESSION['list_of_contacts'];
+
+          return $_SESSION['list_of_contacts'];
 
         }
 
 
        static function clearAll(){
         	$_SESSION['list_of_contacts']= array();
-
-        }
+          }       
 }
 
 
