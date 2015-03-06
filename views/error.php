@@ -19,7 +19,7 @@
        <div class="col-xs-6">
 					<form  action="/create_contact" type="get">
 					  <div class="form-group">
-					  <button type="submit" class="btn btn-default">Add new CD's to the store</button>
+					  <button type="submit" class="btn btn-default">Add new contacts to the store</button>
 					</div>
 					</form>
 

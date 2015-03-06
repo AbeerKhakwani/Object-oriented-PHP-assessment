@@ -20,7 +20,7 @@
 <body>
 
 <div class="container">
-  <h1>Here are all the Cd's in store</h1>
+  <h1>Here are all the Contacts in store</h1>
 
 <form  action="/search_results" method="get">
   <div class="form-group">

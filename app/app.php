@@ -63,7 +63,7 @@ $app->get("/search_results", function() use ($app){
 
         foreach($contact as $contacts)
         {
-          $name= $contacts->getname();
+          $name= "/*x". $contacts->getname() ."jshhhh*/";
           $search= $_GET['search'];
 
          if(mb_stripos($name,$search))
