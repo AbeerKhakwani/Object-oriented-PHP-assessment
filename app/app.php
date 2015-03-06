@@ -28,16 +28,30 @@ $app->get("/create_contact", function() use ($app){
 });
 
 $app->post("/created_contact", function() use ($app){ 
+     if (!empty($_POST['name']) || !empty($_GET['image']) || !empty($_POST['phone']) || !empty($_POST['email']))  {
 
-		$Contact=new Contact($_POST['name'],$_POST['image'],$_POST['phone'],$_POST['email']);
+       $Contact=new Contact($_POST['name'],$_POST['image'],$_POST['phone'],$_POST['email']);
 		$Contact->save();
          return $app['twig']->render("created_contact.php", array("Contact1"=>$Contact));
 
+
+     }                               
+
+      	else{
+		
+          return $app['twig']->render("error.php");
+
+     }
+
 });
+
+
 $app->post("/delete_contacts", function() use ($app){   
       return $app['twig']->render("clear.php", array("delete"=> Contact:: deleteAll()));
 
 });
+
+
 
 
 
