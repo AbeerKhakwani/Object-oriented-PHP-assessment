@@ -34,7 +34,10 @@ $app->post("/created_contact", function() use ($app){
          return $app['twig']->render("created_contact.php", array("Contact1"=>$Contact));
 
 });
+$app->post("/delete_contacts", function() use ($app){   
+      return $app['twig']->render("clear.php", array("delete"=> Contact:: deleteAll()));
 
+});
 
 
 

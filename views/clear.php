@@ -7,21 +7,13 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-	<title>Address Book</title>
+	<title>Delete</title>
 </head>
 <body>
 	
 <div class="container">
-	<h2>Here are all the addresses in the address book</h2>
-	<div class="row">
-       <div class="col-xs-6">
-         	{% for contact in allContacts %}
-       <img class="thumbnail" src="{{ contact.getimage}}" />
-       	<p>Name: {{contact.getname}}</p>
-       	<p>Number: {{contact.getphone}}</p>
-       	 	<p>Email: {{contact.getemail}}</p>
-       	{% endfor %}
-
+	<h2>You Have deleted everything in your address book</h2>
+	
        	 
        </div>
       </div>
@@ -43,6 +35,11 @@
 					<form id="form_id" action="/search" method="get">
 						    <div class="form-group">
 					        <button  class="btn btn-default" type="submit">Search Cd's By artist</button>
+					        <div>
+					</form>  
+					<form id="form_id" action="/" method="get">
+						    <div class="form-group">
+					        <button  class="btn btn-default" type="submit">Home</button>
 					        <div>
 					</form>  
 
