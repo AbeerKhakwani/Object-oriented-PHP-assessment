@@ -4,12 +4,12 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-	<title>Form Enter new Cd</title>
+	<title>Form Enter new Contact</title>
 </head>
 <body>
 <div class="container">
 	<h2>Enter a New Contact</h2>
-<form  action="/entered" method="post">
+<form  action="/created_contact" method="post">
   <div class="form-group">
     <label for="image">Enter Image</label>
     <input type="text" name="image" class="form-control" id="image" placeholder="Enter Image">

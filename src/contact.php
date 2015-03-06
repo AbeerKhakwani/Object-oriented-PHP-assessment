@@ -1,90 +1,64 @@
 <?php
 
-class Contact{
-
-      private $name;
-      private $image;
-      private $number;
-      private $email;
-      
-
-
-      function __construct__ ( $add_name , $add_image , $add_number, $add_email  ) {
-      	$this->name=$add_name;
-        $this->image=$add_image;
-        $this->number=$add_number;
-        $this->email=$add_email;
-      }
-
-
-     function setName($new_name)
+    class Contact
+    {
+        private $name;
+        private $image;
+        private $phone;
+        private $email;
+        function __construct($album_name, $band_name, $image_path, $album_email = 10.99)
         {
-           $this->name = (string) $new_name;
-            
-            
+            $this->name = $album_name;
+            $this->image = $band_name;
+            $this->phone = $image_path;
+            $this->email = $album_email;
         }
-        function getName()
+        function setemail($new_email)
+        {         
+            
+                $this->email = $new_email;
+               
+        }
+        function getemail()
+        {
+            return $this->email;
+        }
+        function setname($new_name)
+        {
+            $this->name = $new_name;
+        }
+        function getname()
         {
             return $this->name;
         }
-
-
-
-       function setImage($new_image)
+        function setimage($new_image)
         {
-           $this->image = (string) $new_image;
-            
-            
+            $this->image = $new_image;
         }
-        function getImage()
+        function getimage()
         {
             return $this->image;
         }
-
-
-
-
-        function setPhone($new_phone)
+        function setphone($new_phone)
         {
-           $this->phone =  $new_phone;
-            
-            
+            $this->phone = $new_phone;
         }
-        function getPhone()
+        function getphone()
         {
             return $this->phone;
         }
 
+        function save()  {
+          array_push($_SESSION['list_of_contacts'], $this);
 
-       
-        function setEmail($new_email)
-        {
-           $this->email =  $new_email;
-            
-            
         }
-        function getEmail()
-        {
-            return $this->email;
-        }
-        
-
-        function save(){
-        	array_push($_SESSION['list_of_contacts'], $this);
-        }
-
-
         static function getAll(){
 
           return $_SESSION['list_of_contacts'];
 
         }
-
-
-       static function clearAll(){
-        	$_SESSION['list_of_contacts']= array();
-          }       
-}
-
-
+          static function deleteAll() {
+          $_SESSION['list_of_contacts'] = array();
+    }
+    }
 ?>

@@ -15,15 +15,14 @@
 	<h2>Here are all the addresses in the address book</h2>
 	<div class="row">
        <div class="col-xs-6">
+         	{% for contact in allContacts %}
+       <img class="thumbnail" src="{{ Contact.getimage}}" />
+       	{{contact.getname}}
+       	{{contact.getphone}}
+       	{{contact.getemail}}
+       	{% endfor %}
 
-       	 {% for cd in allcds %}
-       	
-       	 {{cd.getImage}}
-       	  {{cd.getName}}
-       	 {{cd.getPhone}}
-       	 {{cd.getEmail}}
-
-       	 {% endfor %}
+       	 
        </div>
       </div>
 
