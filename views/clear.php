@@ -34,7 +34,7 @@
 
 					<form id="form_id" action="/search" method="get">
 						    <div class="form-group">
-					        <button  class="btn btn-default" type="submit">Search Cd's By artist</button>
+					        <button  class="btn btn-default" type="submit">Search Contacts</button>
 					        <div>
 					</form>  
 					<form id="form_id" action="/" method="get">

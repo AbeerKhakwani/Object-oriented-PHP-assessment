@@ -52,8 +52,29 @@ $app->post("/delete_contacts", function() use ($app){
 });
 
 
+$app->get("/search", function() use ($app){   
+      return $app['twig']->render("search.php");
 
+});
 
+$app->get("/search_results", function() use ($app){   
+	 $contact_search_results= array();
+     $contact=Contact::getAll();
+
+        foreach($contact as $contacts)
+        {
+          $name= $contacts->getname();
+          $search= $_GET['search'];
+
+         if(mb_stripos($name,$search))
+         {          
+            array_push($contact_search_results, $contacts);
+         }
+
+        }
+      return $app['twig']->render("search_results.php" ,array("search_results"=> $contact_search_results));
+
+});
 
 
 return $app;
