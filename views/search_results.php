@@ -30,7 +30,7 @@
   </div>
   <form  action="/" type="post">
   <div class="form-group">
-      <button type="submit" class="btn btn-default">Go home to see all CD's</button>
+      <button type="submit" class="btn btn-default">Go home to see all your contacts</button>
   </form>
 
 </div>

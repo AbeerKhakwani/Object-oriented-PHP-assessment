@@ -15,19 +15,6 @@
 	<h2>Here are all the addresses in the address book</h2>
 	<div class="row">
        <div class="col-xs-6">
-         	{% for contact in allContacts %}
-       <img class="thumbnail" src="{{ contact.getimage}}" />
-       	<p>Name: {{contact.getname}}</p>
-       	<p>Number: {{contact.getphone}}</p>
-       	 	<p>Email: {{contact.getemail}}</p>
-       	{% endfor %}
-
-       	 
-       </div>
-      </div>
-
-      	<div class="row">
-       <div class="col-xs-6">
 					<form  action="/create_contact" type="get">
 					  <div class="form-group">
 					  <button type="submit" class="btn btn-default">Add new Contact to the store</button>
@@ -46,6 +33,20 @@
 					        <div>
 					</form>  
 
+	<div class="row">
+       <div class="col-xs-6">
+         	{% for contact in allContacts %}
+       <img class="thumbnail" src="{{ contact.getimage}}" />
+       	<p>Name: {{contact.getname}}</p>
+       	<p>Number: {{contact.getphone}}</p>
+       	 	<p>Email: {{contact.getemail}}</p>
+       	{% endfor %}
+
+       	 
+       </div>
+      </div>
+
+      	
 	</div>  
 </div>
 
