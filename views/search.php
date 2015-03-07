@@ -24,7 +24,7 @@
 
 <form  action="/search_results" method="get">
   <div class="form-group">
-    <label for="search">Enter Artist Name</label>
+    <label for="search">Search by Name</label>
     <input type="text" name="search" class="form-control" id="search" placeholder="Search">
   </div>  
   <button type="submit" class="btn btn-default">Submit</button>
